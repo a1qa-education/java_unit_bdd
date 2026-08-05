@@ -5,6 +5,7 @@ import lombok.Getter;
 @Getter
 public enum MainPageNavigation {
     JAVASCRIPT_ALERT("JavaScript Alerts"),
+    FORM_AUTHENTICATION("Form Authentication"),
     SORTABLE_DATA_TABLES("Sortable Data Tables");
 
     private final String label;
