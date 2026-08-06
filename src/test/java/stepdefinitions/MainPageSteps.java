@@ -1,6 +1,7 @@
 package stepdefinitions;
 
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import pages.MainPage;
 import org.testng.Assert;
 
@@ -8,19 +9,13 @@ public class MainPageSteps {
 
     private final MainPage mainPage = new MainPage();
 
-    @Given("I open main page")
-    public void iOpenMainPage() {
+    @Given("the main page is open")
+    public void theMainPageIsOpen() {
         Assert.assertTrue(mainPage.state().waitForDisplayed(), "Main page is not open");
     }
 
-    @Given("I navigate to {string} page")
-    public void iNavigateToPage(String pageName) {
+    @When("I navigate to the {string} page")
+    public void iNavigateToThePage(String pageName) {
         mainPage.clickNavigationLink(pageName);
-    }
-
-    @Given("I open the {string} page")
-    public void iOpenThePage(String pageName) {
-        iOpenMainPage();
-        iNavigateToPage(pageName);
     }
 }

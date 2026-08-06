@@ -10,11 +10,9 @@ public class LoginPageSteps {
 
     private final LoginPage loginPage = new LoginPage();
 
-    @Then("the {string} page is open")
-    public void thePageIsOpen(String pageName) {
-        if (pageName.equals("Form Authentication")) {
-            Assert.assertTrue(loginPage.state().waitForDisplayed(), pageName + " page is not open");
-        }
+    @Then("the 'Form Authentication' page is open")
+    public void theFormAuthenticationPageIsOpen() {
+        Assert.assertTrue(loginPage.state().waitForDisplayed(), "Form Authentication page is not open");
     }
 
     @When("I log in with valid credentials")
