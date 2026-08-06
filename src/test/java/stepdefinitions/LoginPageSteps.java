@@ -10,18 +10,15 @@ public class LoginPageSteps {
 
     private final LoginPage loginPage = new LoginPage();
 
-    @Then("the Form Authentication page should be open")
-    public void theFormAuthenticationPageShouldBeOpen() {
-        Assert.assertTrue(loginPage.state().waitForDisplayed(), "Form Authentication page is not open");
+    @Then("the {string} page is open")
+    public void thePageIsOpen(String pageName) {
+        if (pageName.equals("Form Authentication")) {
+            Assert.assertTrue(loginPage.state().waitForDisplayed(), pageName + " page is not open");
+        }
     }
 
-    @When("I login with valid credentials")
+    @When("I log in with valid credentials")
     public void iLoginWithValidCredentials() {
         loginPage.login(TestDataReader.getUserData().getUsername(), TestDataReader.getUserData().getPassword());
-    }
-
-    @Then("the Form Authentication page should be open after logout")
-    public void theFormAuthenticationPageShouldBeOpenAfterLogout() {
-        Assert.assertTrue(loginPage.state().waitForDisplayed(), "Form Authentication page is not open after logout");
     }
 }

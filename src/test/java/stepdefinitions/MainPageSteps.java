@@ -17,4 +17,10 @@ public class MainPageSteps {
     public void iNavigateToPage(String pageName) {
         mainPage.clickNavigationLink(pageName);
     }
+
+    @Given("I open the {string} page")
+    public void iOpenThePage(String pageName) {
+        iOpenMainPage();
+        iNavigateToPage(pageName);
+    }
 }

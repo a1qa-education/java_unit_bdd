@@ -14,13 +14,13 @@ public class SecureAreaPageSteps {
         Assert.assertTrue(secureAreaPage.state().waitForDisplayed(), "Secure area page is not open");
     }
 
-    @Then("the successful login message {string} is displayed")
-    public void theSuccessfulLoginMessageIsDisplayed(String message) {
-        Assert.assertTrue(secureAreaPage.getSuccessMessageText().contains(message), "Successful login message is not displayed");
+    @Then("the success message is displayed")
+    public void theSuccessMessageIsDisplayed() {
+        Assert.assertTrue(secureAreaPage.getSuccessMessageText().contains("You logged into a secure area!"), "Successful login message is not displayed");
     }
 
-    @When("I click logout")
-    public void iClickLogout() {
+    @When("I log out")
+    public void iLogOut() {
         secureAreaPage.clickLogout();
     }
 }
