@@ -1,4 +1,4 @@
 {
-  "host": "https://the-internet.herokuapp.com",
-  "wait": 10
+  "host": "https://www.timeanddate.com",
+  "wait": 20
 }

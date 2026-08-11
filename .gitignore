@@ -1,4 +1,6 @@
 target/
+downloads/
+allure-results/
 *.class
 .idea/
 *.iml

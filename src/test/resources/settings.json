@@ -13,7 +13,8 @@
         "profile.default_content_settings.popups": "0",
         "disable-popup-blocking": "true",
         "download.prompt_for_download": "false",
-        "download.default_directory": "./downloads"
+        "download.default_directory": "./downloads",
+        "plugins.always_open_pdf_externally": "true"
       },
       "loggingPreferences": {
         "Performance": "All"
