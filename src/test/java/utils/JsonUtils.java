@@ -9,6 +9,7 @@ import java.io.FileReader;
 
 @UtilityClass
 public class JsonUtils {
+    public final String RESOURCES_PATH = "src/test/resources/";
     private final String JSON_DESERIALIZE_ERROR_MSG = "Could not deserialize JSON file at '%s'. Cause: %s";
     private final Gson GSON = new Gson();
 
